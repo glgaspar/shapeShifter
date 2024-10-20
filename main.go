@@ -24,7 +24,7 @@ func main() {
 func processor(c *gin.Context) {
 	var err error
 	var bodyJson []byte
-	var body Request
+	var body *Request = NewRequest()
 
 	bodyJson, err = io.ReadAll(c.Request.Body)
 	if err != nil {
